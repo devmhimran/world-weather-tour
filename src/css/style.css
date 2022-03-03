@@ -5,42 +5,74 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-/* .weather{
-    width: 100%;
-    height: 100vh;
-   display: flex;
-   align-items: center;
-}
-
-.icon{
-    color: red;
-}
-.weather-icon{
-    font-size: 70px;
-}
-.city-name h2{
-    font-size: 56px;
-} */
 .weather{
     width: 100%;
     height: 100vh;
-    background-image: url('/src/img/weahter-tour-img.jpg');
+    background-image: url('/src/img/weather-bg-03.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.city-input-form{
+    justify-content: center;
+}
+.city-input{
+    
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.city-input-button{
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-decoration: none;
+}
+.city-input-button:hover{
+    background-color: #fff;
+    color: #262524;
+}
+.city-input:focus{
+    outline: 1px solid #fff;
+}
+
+.card{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.7px);
+-webkit-backdrop-filter: blur(3.7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .weather-icon{
     font-size:40px;
+}
+.weather-name h2{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.weather-temp h3{
+    font-size: 42px;
+    font-weight: 500;
+    color: #fff;
 }
 .weather-detail{
     width: 430px;
 }
-.card{
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.18);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(2.7px);
--webkit-backdrop-filter: blur(2.7px);
-border: 1px solid rgba(255, 255, 255, 0.15);
-}
-.weather-temp h2{
-    font-size: 96px;
+.weather-condition p{
+    font-size: 26px;
+    color: #fff;
 }

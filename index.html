@@ -13,23 +13,26 @@
 
     <section class="weather d-flex justify-content-center align-items-center">
         <div class="weather-detail">
-            <div class="form">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Enter any city name" aria-label="Enter any city name" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
-                  </div>
+            <div class="city-input-form">
+                <div class="input-group mb-3 justify-content-center">
+                    <input id="city-input" class="city-input" type="text" name="" placeholder="Enter any city">
+                    <a id="city-input-button" class="city-input-button" href="#">Search</a>  
+                </div>
             </div>
             <div class="weather-report-show mt-5 rounded">
                 <div class="card border-0 shadow">
-                    <div class="card-body text-dark">
+                    <div class="card-body">
                         <div class="weather-icon text-center">
-                            <i class="fa-solid fa-cloud-moon"></i>
+                            <img id="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
                         </div>
                         <div class="weather-name text-center">
-                            <h2>Dhaka</h2>
+                            <h2 id="weather-city">Dhaka</h2>
                         </div>
                         <div class="weather-temp text-center">
-                            <h2>96</h2>
+                            <h3><span id="weather-temp">96</span>&deg;C</h3>
+                        </div>
+                        <div class="weather-condition text-center">
+                            <p id="weather-condition">Clouds</p>
                         </div>
                     </div>
                 </div>
