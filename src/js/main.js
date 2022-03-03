@@ -1,7 +1,10 @@
 
 const api_key = `e50837b613fc8767d7de30f0b334d3c4`;
 
-
+const preloader = style => {
+    const preloaderId = document.getElementById('preloader');
+    preloaderId.style.display = style;
+};
 document.getElementById('city-input-button').addEventListener('click', function(){
     const searchTemp = ()=> {
         const cityInput = document.getElementById('city-input');
@@ -11,10 +14,12 @@ document.getElementById('city-input-button').addEventListener('click', function(
         fetch(url)
         .then(res => res.json())
         .then(weatherData => DisplayWeatherData(weatherData));
+        preloader('block');
     };
     const showWeather = (id, text) => {
         const weatherShow = document.getElementById(id);
         weatherShow.innerText = text;
+        preloader('none');
     };
     searchTemp();
    const DisplayWeatherData = (weatherData) => {
