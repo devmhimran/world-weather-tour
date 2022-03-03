@@ -5,3 +5,29 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+/* .weather{
+    width: 100%;
+    height: 100vh;
+   display: flex;
+   align-items: center;
+}
+
+.icon{
+    color: red;
+}
+.weather-icon{
+    font-size: 70px;
+}
+.city-name h2{
+    font-size: 56px;
+} */
+.weather{
+    width: 100%;
+    height: 100vh;
+}
+.weather-icon{
+    font-size:40px;
+}
+.weather-detail{
+    width: 430px;
+}
