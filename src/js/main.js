@@ -1,9 +1,9 @@
 
 const api_key = `e50837b613fc8767d7de30f0b334d3c4`;
 
-const preloader = style => {
+const preloader = designStyle => {
     const preloaderId = document.getElementById('preloader');
-    preloaderId.style.display = style;
+    preloaderId.style.display = designStyle;
 };
 document.getElementById('city-input-button').addEventListener('click', function(){
     const searchTemp = ()=> {
@@ -19,18 +19,15 @@ document.getElementById('city-input-button').addEventListener('click', function(
     const showWeather = (id, text) => {
         const weatherShow = document.getElementById(id);
         weatherShow.innerText = text;
-        preloader('none');
+        preloader('none')
     };
     searchTemp();
    const DisplayWeatherData = (weatherData) => {
        showWeather('weather-city', weatherData.name);
        showWeather('weather-temp', weatherData.main.temp);
        showWeather('weather-condition', weatherData.weather[0].main);
-    //    const weatherIcon = showWeather('weather-condition', weatherData.weather[0].icon);
        const weatherIcon = document.getElementById('weather-icon');
        weatherIcon.setAttribute('src', `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`);
-    //    showWeather('weather-temp', weatherData.main.temp);
        console.log(weatherData.weather[0]);
    }
-// console.log('click');
 });
